@@ -1,6 +1,6 @@
 from random import randint
 
-#x is number of sides, y is number of dice. Adder is a list that the die rolls get written to, and printed by the last line of the Roller.
+#x is number of dice, y is number of sides. Adder is a list that the die rolls get written to, and printed by the last line of the Roller.
 def Roller(x,y):
   Adder = []
   for x in range(1,x+1):
@@ -35,8 +35,8 @@ while Do_roll == "y":
 
   Roll_again = input('Roll again? y/n\n')
   if Roll_again == "y":
-    #don't remove the line immediately below. It must be called Roller, the code breaks without it. No idea why.
-    Roller(Num_Dice, Size_Dice)
+    #don't remove the line immediately below. It must be called Roller, the code breaks without it. No idea why. Should be able to replace with continue, but that breaks
+    continue
   else:
     print('Okay, bye!')
     break
