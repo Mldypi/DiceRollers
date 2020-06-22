@@ -36,7 +36,7 @@ while Do_roll == "y":
   Roll_again = input('Roll again? y/n\n')
   if Roll_again == "y":
     #don't remove the line immediately below. It must be called Roller, the code breaks without it. No idea why.
-    Roller
+    Roller(Num_Dice, Size_Dice)
   else:
     print('Okay, bye!')
     break
