@@ -34,10 +34,7 @@ while Do_roll == "y":
   Roller(Num_Dice, Size_Dice)
 
   Roll_again = input('Roll again? y/n\n')
-  if Roll_again == "y":
-    #don't remove the line immediately below. It must be called Roller, the code breaks without it. No idea why. Should be able to replace with continue, but that breaks
-    continue
-  else:
+  if Roll_again != "y":
     print('Okay, bye!')
     break
 else:
