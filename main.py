@@ -8,9 +8,10 @@ def Roller(x,y):
     Adder.append(z)
   print(Adder)
 
+#This is where the inputs and rolling happen. While loop contains exception handlers to avoid errors from non-positive-integer inputs. Size_Dice and Num_Dice are the input functions.
 Do_roll = input('Do you want to roll? y/n\n')
 while Do_roll == "y":
-  #attempting to write an exception handler
+  #Exception handler
   try:
     Size_Dice = int(input('How many sides do the dice have?\n'))
   except ValueError:
@@ -29,11 +30,12 @@ while Do_roll == "y":
     print ("Sorry, number of dice must not be negative")
     continue
 
+#calls the roller from above, with num_dice and size_dice as x,y.
   Roller(Num_Dice, Size_Dice)
 
   Roll_again = input('Roll again? y/n\n')
   if Roll_again == "y":
-    #don't remove 36, it must be Roller, the code breaks without it. No idea why.
+    #don't remove the line immediately below. It must be called Roller, the code breaks without it. No idea why.
     Roller
   else:
     print('Okay, bye!')
